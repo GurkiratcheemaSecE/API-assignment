@@ -1,0 +1,13 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-image: url(https://lh3.googleusercontent.com/ci/AE9Axz_px9OKbRF8ye3nsYo3QqMqJNsv6qTqzbXke_CKfcHWiy7jzrJ3XCeOA9dzRXsJ13c5So_asQ=s1200);
+    color: white;
+    background-size: cover;
+}
+
+#data-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+

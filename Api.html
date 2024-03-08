@@ -1,0 +1,30 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="API.css">
+    <title>Fetch Api Example</title>
+</head>
+<body> 
+    <h1>The Metropolitan Museum of Art Collection </h1>
+    <p>Nestled in the heart of New York City, The Metropolitan Museum of Art stands as a beacon of cultural richness and artistic diversity. Its vast and awe-inspiring collection spans centuries and continents, housing masterpieces that reflect the brilliance of human creativity. From ancient artifacts to modern marvels, the museum's curated exhibits showcase the evolution of art and culture. Visitors traverse through rooms adorned with priceless paintings, sculptures, and artifacts, each telling a unique tale of artistic expression. The Metropolitan Museum of Art Collection is not merely a repository of treasures; it is a living testament to the beauty and depth of human ingenuity.</p>
+   <h3>Number of publicly-available objects</h3>
+<!-- Placeholder for the data initially displaying a loading message -->
+    <div id="postData2"><em>Loading data....</em></div>
+
+<script>
+    // Use the fetch API to retrieve data from the specified URL
+    fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects')
+    .then(response => response.json())// conver the response to JSON
+    .then(data => {
+        console.log(data); /// log the data to the console
+        // Update the content of the 'postData2' div with the total number of objects
+        document.getElementById('postData2').textContent = JSON.stringify(data.total);
+    })
+    .catch(error => console.error('Error fectching data:', error));// Handle errors during the fetch operation
+    </script>
+    
+</script>
+</body>
+</html>
